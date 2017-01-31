@@ -1,0 +1,28 @@
+<ion-view  ng-init="init()">
+
+  <ion-nav-bar class="bar-stable">
+
+    <ion-nav-title> {{ title }} </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-small button-clear" ng-click="showBarcodePopover($event)">
+        <i class="icon ion-ios-more-outline"></i>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="barcode in publishedBarcodes" type="item-text-wrap" ng-click="_setupAndOpenBarcodeViewerModal(_getBarcodeImgUrlByImageName(barcode.imgName))">
+        <img ng-src="{{_getBarcodeImgUrlByImageName(barcode.imgName)}}">
+        <h2>{{barcode.generatedTime}}</h2>
+        <p>is Valid? <span ng-if="barcode.isValid">YES</span> <span ng-if="!barcode.isValid">NO</span></p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

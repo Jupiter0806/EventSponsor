@@ -1,0 +1,20 @@
+<ion-popover-view>
+  <ion-content>
+
+    <ion-list ng-click="_hideBarcodePopover()">
+      <a class="item item-icon-left" ng-click="_generateBarcode()">
+        <i class="icon ion-ios-barcode-outline"></i>
+        <!--<img ng-src="{{_CHATS_SEND_A_FILE_URL}}">-->
+        <span>Generate Barcode</span>
+      </a>
+
+      <a class="item item-icon-left" ng-click="_scanBarcode()">
+        <i class="icon ion-qr-scanner"></i>
+        <!--<img ng-src="{{_CHATS_EMAIL_URL}}">-->
+        <span>Scan Barcode</span>
+      </a>
+
+    </ion-list>
+
+  </ion-content>
+</ion-popover-view>

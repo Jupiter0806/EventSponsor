@@ -1,0 +1,21 @@
+<ion-modal-view>
+
+  <ion-header-bar>
+    <button class="button button-icon icon ion-ios-arrow-down" ng-click="_closeLoginModal()"></button>
+  </ion-header-bar>
+
+  <ion-content class="padding" ng-controller="LoginCtrl" ng-init="init()" scrollbar-y="false" style="padding-top: 100px">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Username" ng-model="inputs.loginInfo.username">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="inputs.loginInfo.password">
+      </label>
+
+      <button class="button button-block button-positive" ng-click="login()">Login</button>
+
+    </div>
+  </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,15 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Your Barcode</h1>
+    <button class="button button-positive button-clear" ng-click="_closeBarcodeViewerModal()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content>
+    <img ng-src="{{_barcodeViewer_barcodeUrl}}">
+
+    <button style="width: 80%" class="button button-positive button-block" ng-click="_sendBarcodeViaWeChat()">Send</button>
+
+
+  </ion-content>
+
+</ion-modal-view>
